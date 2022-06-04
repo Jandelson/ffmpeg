@@ -1,0 +1,58 @@
+ffmpeg started on 2022-06-04 at 09:44:15
+Report written to "ffmpeg-20220604-094415.log"
+Command line:
+ffmpeg -report -hide_banner -i videoplayback.mp4 -filter:v "select='gt(scene,0.5)',metadata=print:file=scenechanges.txt" -f null
+Splitting the commandline.
+Reading option '-report' ... matched as option 'report' (generate a report) with argument '1'.
+Reading option '-hide_banner' ... matched as option 'hide_banner' (do not show program banner) with argument '1'.
+Reading option '-i' ... matched as input url with argument 'videoplayback.mp4'.
+Reading option '-filter:v' ... matched as option 'filter' (set stream filtergraph) with argument 'select='gt(scene,0.5)',metadata=print:file=scenechanges.txt'.
+Reading option '-f' ... matched as option 'f' (force format) with argument 'null'.
+Trailing options were found on the commandline.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option report (generate a report) with argument 1.
+Applying option hide_banner (do not show program banner) with argument 1.
+Successfully parsed a group of options.
+Parsing a group of options: input url videoplayback.mp4.
+Successfully parsed a group of options.
+Opening an input file: videoplayback.mp4.
+[NULL @ 0x55dd8ba58580] Opening 'videoplayback.mp4' for reading
+[file @ 0x55dd8ba59000] Setting default whitelist 'file,crypto'
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x55dd8ba58580] Format mov,mp4,m4a,3gp,3g2,mj2 probed with size=2048 and score=100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x55dd8ba58580] ISO: File Type Major Brand: mp42
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x55dd8ba58580] Unknown dref type 0x206c7275 size 12
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x55dd8ba58580] Unknown dref type 0x206c7275 size 12
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x55dd8ba58580] Before avformat_find_stream_info() pos: 39927 bytes read:65536 seeks:0 nb_streams:2
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 7(SPS), nal_ref_idc: 3
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 8(PPS), nal_ref_idc: 3
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 6(SEI), nal_ref_idc: 0
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 5(IDR), nal_ref_idc: 3
+[h264 @ 0x55dd8ba5a240] Format yuv420p chosen by get_format().
+[h264 @ 0x55dd8ba5a240] Reinit context to 640x320, pix_fmt: yuv420p
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 1(Coded slice of a non-IDR picture), nal_ref_idc: 2
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 1(Coded slice of a non-IDR picture), nal_ref_idc: 2
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 1(Coded slice of a non-IDR picture), nal_ref_idc: 2
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 1(Coded slice of a non-IDR picture), nal_ref_idc: 2
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 1(Coded slice of a non-IDR picture), nal_ref_idc: 2
+[h264 @ 0x55dd8ba5a240] nal_unit_type: 1(Coded slice of a non-IDR picture), nal_ref_idc: 2
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x55dd8ba58580] All info found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x55dd8ba58580] After avformat_find_stream_info() pos: 67327 bytes read:98304 seeks:0 frames:12
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'videoplayback.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    creation_time   : 2019-12-31T03:38:19.000000Z
+  Duration: 00:02:13.28, start: 0.000000, bitrate: 424 kb/s
+    Stream #0:0(und), 11, 1/24000: Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 640x312 [SAR 1:1 DAR 80:39], 326 kb/s, 23.98 fps, 23.98 tbr, 24k tbn, 47.95 tbc (default)
+    Metadata:
+      creation_time   : 2019-12-31T03:38:19.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 12/30/2019.
+    Stream #0:1(und), 1, 1/44100: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2019-12-31T03:38:19.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 12/30/2019.
+Successfully opened the file.
+At least one output file must be specified
+[AVIOContext @ 0x55dd8ba613c0] Statistics: 98304 bytes read, 0 seeks
